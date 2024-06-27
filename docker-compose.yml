@@ -42,7 +42,7 @@ services:
     build: .
     image: ragapp/ragapp:latest
     ports:
-      - "8000:8000"
+      - "8001:8000"
     volumes:
       - ./config:/app/config
       - ./data:/app/data
@@ -50,7 +50,7 @@ services:
       - VECTOR_STORE_PROVIDER=qdrant
       - QDRANT_URL=http://qdrant:6333
       - QDRANT_COLLECTION=default
-      - QDRANT_API_KEY=""
+      - QDRANT_API_KEY="Qwt-5JUNkC20UFv6TLtl1ciqXCj8XPochMDg0XGgn8zPVoQPgyeBbA"
       - MODEL_PROVIDER=ollama
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://ollama:11434}
       - EMBEDDING_MODEL=nomic-embed-text
