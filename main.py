@@ -70,7 +70,7 @@ app.mount(
 
 if __name__ == "__main__":
     app_host = os.getenv("APP_HOST", "0.0.0.0")
-    app_port = int(os.getenv("APP_PORT", "8001"))
+    app_port = int(os.getenv("APP_PORT", "8000"))
     reload = environment == "dev"
 
     uvicorn.run(

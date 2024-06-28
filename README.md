@@ -19,10 +19,10 @@
 To run, start a docker container with our image:
 
 ```shell
-docker run -p 8001:8000 ragapp/ragapp
+docker run -p 8000:8000 ragapp/ragapp
 ```
 
-Then, access the Admin UI at http://localhost:8001/admin to configure your RAGapp.
+Then, access the Admin UI at http://localhost:8000/admin to configure your RAGapp.
 
 You can use hosted AI models from OpenAI or Gemini, and local models using [Ollama](https://ollama.com/).
 
@@ -32,9 +32,9 @@ You can use hosted AI models from OpenAI or Gemini, and local models using [Olla
 
 The docker container exposes the following endpoints:
 
-- Admin UI: http://localhost:8001/admin
-- Chat UI: http://localhost:8001
-- API: http://localhost:8001/docs
+- Admin UI: http://localhost:8000/admin
+- Chat UI: http://localhost:8000
+- API: http://localhost:8000/docs
 
 > _Note_: The Chat UI and API are only functional if the RAGapp is configured.
 
