@@ -1,11 +1,11 @@
 networks:
-  default:
+  ragapp-network:
     ipam:
       driver: default
       config:
         - subnet: 172.42.12.0/28
           gateway: 172.42.12.1
-          
+
 services:
   qdrant:
     image: qdrant/qdrant:latest
