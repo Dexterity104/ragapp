@@ -5,8 +5,7 @@ services:
       - 6333:6333
       - 6334:6334
     networks:
-      ragapp-network:
-        ipv4_address: 172.18.0.2
+      - ragapp-network
 
   ollama:
     image: ollama/ollama:latest
@@ -15,8 +14,7 @@ services:
     volumes:
       - ./ollama:/root/.ollama
     networks:
-      ragapp-network:
-        ipv4_address: 172.18.0.3
+      - ragapp-network
   
   setup:
     image: curlimages/curl:latest
@@ -39,9 +37,6 @@ services:
     depends_on:
       - qdrant
       - ollama
-    networks:
-      ragapp-network:
-        ipv4_address: 172.18.0.4
 
   ragapp:
     build: .
@@ -64,8 +59,7 @@ services:
     depends_on:
       - setup
     networks:
-      ragapp-network:
-        ipv4_address: 172.18.0.5
+      - ragapp-network
   
 networks:
   ragapp-network:
