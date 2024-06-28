@@ -46,6 +46,6 @@ COPY . .
 # Create an empty data folder
 RUN mkdir -p data
 
-EXPOSE 8000
+EXPOSE 8001
 
 CMD ["python", "main.py"]
