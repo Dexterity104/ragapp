@@ -1,5 +1,13 @@
 # ragbox
 
+## 0.0.12
+
+### Patch Changes
+
+- dfc381e: Add Groq provider
+- 0f22618: Add loading state to forms
+- 0f22618: Add custom tool prompt to system prompt
+
 ## 0.0.11
 
 ### Patch Changes
