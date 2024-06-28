@@ -8,7 +8,7 @@ networks:
 
 services:
   qdrant:
-    image: qdrant/qdrant:latest
+    image: qdrant/qdrant:latest111
     ports:
       - 6333:6333
       - 6334:6334
