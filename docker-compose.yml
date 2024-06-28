@@ -1,19 +1,9 @@
-networks:
-  ragapp-network:
-    ipam:
-      # driver: default
-      config:
-        - subnet: 172.17.0.0/16
-          # gateway: 172.42.12.1
-
 services:
   qdrant:
     image: qdrant/qdrant:latest
     ports:
       - 6333:6333
       - 6334:6334
-    networks:
-      - ragapp-network
 
   ollama:
     image: ollama/ollama:latest
@@ -21,13 +11,9 @@ services:
       - 11434:11434 
     volumes:
       - ./ollama:/root/.ollama
-    networks:
-      - ragapp-network
   
   setup:
     image: curlimages/curl:latest
-    networks:
-      - ragapp-network
     volumes:
       - ./scripts:/ragapp
     environment:
@@ -66,6 +52,4 @@ services:
       - MODEL=${MODEL:-phi3:latest}
     depends_on:
       - setup
-    networks:
-      - ragapp-network
   
