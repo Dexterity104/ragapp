@@ -157,7 +157,7 @@ export const ModelConfig = ({
                 </FormControl>
                 <FormDescription>
                   Select a model provider to chat with. If you are not sure,
-                  leave it as default.11111
+                  leave it as default.
                 </FormDescription>
               </FormItem>
             )}
